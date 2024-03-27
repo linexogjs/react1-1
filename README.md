@@ -101,5 +101,41 @@
     }
 
     - 내부적으로 자바스크립트 객체를 만드는 역할을 하는 함수가 createElement()입니다.
+3. 엘리먼트의 특징
+    - 리액트 엘리먼트의 가장 큰 특징은 불변성입니다.
+    - 즉, 한 번 생성된 엘리먼트의 children이나 속성(attributes)을 바꿀 수 없습니다.
+
+3. 만일 내용이 바뀌면 어떻게 해야 할까요?
+    - 이 때는 컴포넌트를 통해 새로운 엘리먼트를 생성하면 됩니다.
+    - 그 다음 이전 엘리먼트와 교체를 하는 방법으로 내용을 바꾸는 것입니다.
+    - 이렇게 교체하는 작업을 하기위해 Virtual DOM을 사용합니다.
+
+4. 엘리먼트 랜더링하기
+    - Root DOM node
+    - 다음 html 코드는 id값이 root인 div태그로 단순하지만 리액트에 필수로 들어가는 아주 중요한 코드입니다.
+    - 이 div 태그 안에 리액트 엘리먼트가 랜더링 되며, 이 것을 Root DOM node 라고 합니다.
+    <div id="root"> </div>
+    엘리먼트를 랜더링하기 위해서는 다음과 같은 코드가 필요합니다.
     
-    
+    - const element = <h1> 안녕 리액트 </h1>
+    - ReactDom.render(element, document.getElementById('root'));
+
+    - 이때 render() 함수를 사용하게 됩니다.
+    - 이 함수의 첫 번째 파라메터 출력할 리액트 엘리먼트이고, 두번째 파라메터는 출력할 타겟을 나타냅니다.
+    - 즉 리액트 렌터링의 가정은 virtual DOM에서 실제 DOM으로 이동하는 과정이라고 할 수 있습니다.
+4. 랜더링된 엘리먼트 업데이트하기
+    - 다음 코드는 tick() 함수를 정의하고 있습니다.
+    - 이 함수는 현재 시간을 포함한 element를 생성해서 root div에 랜더링해 줍니다.
+    - 그런데 라인 12에 보면 setInterval()함수를 이용해서 정의한 tick()를 1초에 한 번씩 호출하고 있습니다.
+    - 결국 1초에 한번씩 element를 새로 만들고 그것을 교체하는 것입니다.
+    - 다음 코드를 실행하고, 크롬 개발자도구에서 확인해보면 시간 부분만 업데이트 되는 것을 확인 가능합니다.
+    - function tick() {
+        const element ={
+            <div>
+                <h1>안녕 리액트!</h1>
+                <h2>현재 시간 : {new Date().toLocaleTimeString()}</h2>
+            </div>
+        };
+        ReactDom.render(element, document.getElementById('root'));
+    }
+    setInterval(tick, 1000);
