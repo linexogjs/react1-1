@@ -269,6 +269,8 @@ element 재료, component 빵틀, instance 재료..
     - 랜더링은 props, setState, forceUpdate() 에 의해 상태가 변경되면 이루어집니다.
     - 그리고 랜더링이 끝나면 componetWillUmount() 함수가 호출됩니다. 
 
+## 4월 17일 수업내용
+
 7. 훅이란 무엇인가?
     - 클래스형 컴포넌트에서는 생성자에서 state를 정의하고, setState() 함수를 통해 state를 업데이트 합니다.
     - 예전에 사용하던 함수형 컴포넌트는 별도로 state를 정의하거나, 컴포넌트의 생명주기에 맞춰서 어떤 코드가 실행되도록 할 수 없었습니다.
