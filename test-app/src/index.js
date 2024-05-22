@@ -9,13 +9,16 @@ import Clock from './chapter_03/Clock';
 import Welcome from './chapter_05/Welcome';
 
 import FocusButton from './FocusButton';
+import LandingPage from './LandingPage';
+import NumberList from './NumberList';
+import AttendanceBook from './AttendanceBook';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
   root.render(
     <React.StrictMode>
-      <FocusButton />
+      <AttendanceBook />
     </React.StrictMode>
 );
 
