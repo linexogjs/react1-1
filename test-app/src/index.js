@@ -12,13 +12,15 @@ import FocusButton from './FocusButton';
 import LandingPage from './LandingPage';
 import NumberList from './NumberList';
 import AttendanceBook from './AttendanceBook';
+import SignUp from './SignUp';
+import BoilingVerdict from './BoilingVerdict';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
   root.render(
     <React.StrictMode>
-      <AttendanceBook />
+      <BoilingVerdict />
     </React.StrictMode>
 );
 

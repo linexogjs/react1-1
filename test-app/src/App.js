@@ -7,11 +7,13 @@ import FocusButton from './FocusButton';
 import LandingPage from './LandingPage';
 import NumberList from './NumberList';
 import AttendanceBook from './AttendanceBook';
+import SignUp from './SignUp';
+import BoilingVerdict from './BoilingVerdict';
 
 function App() {
   return (
     <div className="App">
-      <AttendanceBook />
+      <BoilingVerdict celsius="109" />
     </div>
   );
 }
