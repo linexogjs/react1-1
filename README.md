@@ -20,8 +20,8 @@
     - block은 세로로 정렬되며, width의 height를 갖을 수 있다. 크기와 상관없이 한 줄을 점유합니다.
     - inline은 가로로 정렬되며, width의 height를 가질 수 없다. 컨텐츠의 크기만큼 공간을 점유합니다.
     - inline-block는 기본적인 inline 특성을 갖지만, width 와 height 등 block의 특성을 사용할 수 있습니다.
-    - Block : <div>, <table>, <h1>~<h6>, <form>, <ul>, <ol>, <li>, <dl>, <dt>, <dd>, <pre> 등
-    - inline : <span>, <a>, <br>, <em>, <strong>, <input>, <label>, <img>
+    - <!--Block : <div>, <table>, <h1>~<h6>, <form>, <ul>, <ol>, <li>, <dl>, <dt>, <dd>, <pre> 등 -->
+    - <!-- inline : <span>, <a>, <br>, <em>, <strong>, <input>, <label>, <img> -->
     - flex는 컨테이너의 형태로 엘리먼트를 관리합니다.
     - 최근 들어서는 Grid를 자주 사용. Flex가 1차원 적이라면 Grid는 2차원적 관리가 가능
 4. Flex box
